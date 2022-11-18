@@ -1,0 +1,3 @@
+PowerShell:
+cd C:\Users\kuchibecka\source\repos\Zver_MPI\
+mpiexec -n 1 .\Zver_MPI.exe

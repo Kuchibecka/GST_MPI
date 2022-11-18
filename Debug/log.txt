@@ -1,0 +1,12 @@
+data size: 5000, num of processes:	12, elapsed time:	88.5404
+data size: 5000, num of processes:	11, elapsed time:	93.1672
+data size: 5000, num of processes:	10, elapsed time:	100.278
+data size: 5000, num of processes:	9, elapsed time:	117.562
+data size: 5000, num of processes:	8, elapsed time:	156.696
+data size: 5000, num of processes:	7, elapsed time:	147.27
+data size: 5000, num of processes:	6, elapsed time:	138.713
+data size: 5000, num of processes:	5, elapsed time:	158.897
+data size: 5000, num of processes:	4, elapsed time:	194.086
+data size: 5000, num of processes:	3, elapsed time:	248.605
+data size: 5000, num of processes:	2, elapsed time:	355.302
+data size: 5000, num of processes:	1, elapsed time:	354.619
