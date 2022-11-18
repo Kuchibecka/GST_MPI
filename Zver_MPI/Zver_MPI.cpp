@@ -1,32 +1,4 @@
-﻿// Zver_MPI.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-/*
-#include <iostream>
-#include <cstdio>
-#include "mpi.h"
-
-int main(int *argc, char **argv)
-{
-    std::cout << "Hello World!\n"; 
-
-	int numTasks, rank;
-
-	MPI_Init(argc, &argv);
-
-	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-	MPI_Comm_size(MPI_COMM_WORLD, &numTasks);
-
-	printf("My rank: %d, processes in work: %d\n", rank, numTasks);
-
-	MPI_Finalize();
-
-	return 0;
-}
-*/
-
-
-#include <iostream>
+﻿#include <iostream>
 #include <clocale>
 #include <cstdio>
 #include <ctime>
@@ -35,53 +7,18 @@ int main(int *argc, char **argv)
 
 using namespace std;
 
-// строка на столбец
-// строка на столбец
-// строка на столбец
-// строка на столбец
-// строка на столбец
-// строка на столбец
-// строка на столбец
-// строка на столбец
-// строка на столбец
 int main(int *argc, char **argv) {
-	//setlocale(LC_ALL, "RUSSIAN");
 	int n, m, v;   // matrix dimensions and vector length
-	// int i, j, k, l;
 	double startTime, endTime; // time of sart and end of multiplication
 	int rank, numProc, block;
 	int* a, * b, * c, * buffer, * ans;
 	FILE* inM = fopen("inM.txt", "rt"); // input matrix file
 	FILE* inV = fopen("inV.txt", "rt"); // input vector file
 	FILE* out = fopen("out.txt", "wt"); // output file
-	// FILE* log = fopen("log.txt", "w");	// log file
 
 	MPI_Init(argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);// get current process number
 	MPI_Comm_size(MPI_COMM_WORLD, &numProc);// get ammount of processes
-
-	/*
-	cout << endl << "____________________________________________________________" << endl;
-	cout << " Fill file in.txt according to following structure:" << endl;
-	cout << " A1  A2 ...  Ai  Av" << endl;
-	cout << " B11 B12 ... B1j B1n" << endl;
-	cout << " B21 B22 ... B2j B2n" << endl;
-	cout << " ... ... ... ... ..." << endl;
-	cout << " Bi1 Bi2 ... Bij Bin" << endl;
-	cout << " Bm1 Bm2 ... Bmj Bmn" << endl;
-
-	cout << "                    , where Bij - [i][j]-element of mathrix B(with dimensions m x n), " << endl;
-	cout << "                      Ai - i-element of vector A (with length v)." << endl;
-	cout << "                      Please note that in order to multiply a matrix by a vector, the equality must be true: m=v (number of columns of the matrix = length of the vector)" << endl;
-	cout << "____________________________________________________________" << endl << endl;
-
-	cout << " Then enter the number of matrix columns: " << endl;
-	cin >> n;
-	cout << " Enter the number of matrix rows: " << endl;
-	cin >> m;
-	cout << " Enter the length of the vector: " << endl;
-	cin >> v;
-	*/
 
 	n = 5000;
 	m = 5000;
